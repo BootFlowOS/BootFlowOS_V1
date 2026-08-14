@@ -1,0 +1,21 @@
+# BootFlow OS V1 Release Checklist
+
+- [ ] Final ISO boots in VM
+- [ ] Final ISO boots from USB
+- [ ] BootFlow branding verified
+- [ ] BootFlow Start icon verified
+- [ ] 38 px dock verified
+- [ ] Brave verified
+- [ ] Networking tested
+- [ ] Installer tested
+- [ ] ISO renamed to `BootFlow-OS-V1-amd64.iso`
+- [ ] ISO SHA-256 generated
+- [ ] ISO split into release-sized parts
+- [ ] Part SHA-256 file generated
+- [ ] Repository files committed
+- [ ] Repository pushed to GitHub
+- [ ] `v1.0` release drafted
+- [ ] All ISO parts uploaded
+- [ ] Checksum files uploaded
+- [ ] Release notes added
+- [ ] Release published

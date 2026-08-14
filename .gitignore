@@ -1,0 +1,27 @@
+# Release binaries
+*.iso
+*.img
+*.raw
+*.qcow2
+*.vdi
+*.vmdk
+*.part-*
+
+# Cubic/build outputs
+build/
+dist/
+output/
+tmp/
+cubic-project/
+
+# Logs/temp
+*.log
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.key
+*.pem
