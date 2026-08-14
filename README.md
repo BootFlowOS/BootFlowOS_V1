@@ -1,40 +1,56 @@
 # BootFlow OS V1
 
-BootFlow OS V1 is an Ubuntu-based desktop operating system customized with BootFlow branding, desktop defaults, Brave, and BootFlow UI changes.
+BootFlow OS is an Ubuntu-based desktop operating system that brings everyday computing, development, and security-focused workflows into one accessible environment.
 
-## Download
-
-BootFlow OS V1 is distributed from the GitHub **Releases** page.
-
-Because the ISO is larger than GitHub's per-file release-asset limit, the release is uploaded in numbered/suffixed parts. Download **all** ISO parts, reassemble them, and verify the SHA-256 checksum before writing the ISO to USB.
-
-See:
-
-- [INSTALL.md](INSTALL.md)
-- [VERIFY.md](VERIFY.md)
-- [RELEASE_NOTES_V1.md](RELEASE_NOTES_V1.md)
+> **Project status:** BootFlow OS V1 is an early public release. Test it in a virtual machine or live USB session before installing it on important hardware. Features described as planned are not necessarily included in V1.
 
 ## V1 highlights
 
-- BootFlow OS V1 branding
-- BootFlow boot/shutdown branding
-- Bottom GNOME dock
-- Dock maximum icon size set to 38 px
-- Custom BootFlow Start / Applications icon
-- Brave browser included
-- Firefox transition package removed
-- Thunderbird removed
+- BootFlow OS branding and customized desktop experience
+- Custom boot and shutdown presentation
+- Bottom GNOME dock with reduced icon sizing
+- Custom BootFlow Applications button
+- Brave browser
+- Ubuntu-based desktop environment
 
-## Open-source licensing
+## Download
 
-BootFlow-owned source code and scripts in this repository are licensed under **GNU GPL v3.0 only**. See [LICENSE](LICENSE).
+Download BootFlow OS from the repository's [Releases](https://github.com/BootFlowOS/BootFlowOS_V1/releases) page.
 
-BootFlow OS also contains Ubuntu, Linux, GNOME, Brave, and many other third-party components. Those components remain under their own upstream licenses and notices. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+The ISO is distributed in multiple parts because of GitHub's individual release-asset size limit. Download every ISO part, `reassemble-iso.sh`, `SHA256SUMS.parts.txt`, and `SHA256SUMS.txt` into the same directory.
 
-## Source
+Verify and reconstruct the image on Linux:
 
-Place BootFlow-owned source code in `src/` and build/customization scripts in `scripts/`. Do not commit the large ISO itself to normal Git history.
+```bash
+sha256sum -c SHA256SUMS.parts.txt
+chmod +x reassemble-iso.sh
+./reassemble-iso.sh
+sha256sum -c SHA256SUMS.txt
+```
 
-## Safety
+Only flash the reconstructed `.iso` after both checksum checks report `OK`. See [INSTALL.md](INSTALL.md) and [VERIFY.md](VERIFY.md) for complete instructions.
 
-Back up important data before installing. Test the live environment before changing disk partitions.
+## Get involved
+
+- Use [Discussions](https://github.com/BootFlowOS/BootFlowOS_V1/discussions) for questions, ideas, testing results, and community conversation.
+- Use [Issues](https://github.com/BootFlowOS/BootFlowOS_V1/issues) for reproducible bugs and specific feature requests.
+- Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request.
+- Review [ROADMAP.md](ROADMAP.md) for current priorities.
+
+Help is welcome with documentation, hardware testing, accessibility, packaging, release engineering, branding, and reproducible builds.
+
+## Responsible use
+
+Security tools must only be used on systems you own or have explicit authorization to test. BootFlow OS does not authorize access to third-party systems.
+
+## Security
+
+Do not post unpatched vulnerabilities, credentials, private keys, or sensitive logs in public Issues or Discussions. Follow [SECURITY.md](SECURITY.md) for private reporting.
+
+## Licensing
+
+BootFlow-owned source code and scripts are licensed under the GNU General Public License v3.0 only. Third-party software remains under its respective upstream licenses. See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Contact
+
+Project inquiries: [BootFlowOS@Proton.me](mailto:BootFlowOS@Proton.me)
